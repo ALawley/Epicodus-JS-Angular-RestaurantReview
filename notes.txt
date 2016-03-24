@@ -1,4 +1,3 @@
-  - when clicked, show more restaurant details
 - edit each restaurant
 - sort by specialty
 - add rating/wait time review functionality
@@ -12,4 +11,12 @@
 
 
 - hardcode restaurants and display restaurant names
+- when clicked, show more restaurant details
 - add restaurants
+
+
+
+// (click)="restaurantClicked(currentRestaurant)"
+// [class.selected]="currentRestaurant === selectedRestaurant"
+
+// <restaurant-details *ngIf="selectedRestaurant" [restaurant]="selectedRestaurant"></restaurant-details>

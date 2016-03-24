@@ -6,7 +6,6 @@ import { Restaurant } from './restaurant.model';
   inputs: ['restaurant'],
   template: `
     <div class="restaurant-details">
-      <h3>{{ restaurant.name }}</h3>
       <h4>{{ restaurant.specialty }}</h4>
       <h4>{{ restaurant.address }} {{ restaurant.price }}</h4>
     </div>

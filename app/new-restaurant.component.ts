@@ -8,10 +8,10 @@ import { Restaurant } from './restaurant.model';
     <div class="restaurant-form">
       <h4>Add a Restaurant:</h4>
       <form (submit)="addRestaurant(newName, newSpecialty, newAddress, newPrice)">
-        <input required placeholder="name" class="col-sm-8 input-lg" #newName>
-        <input required placeholder="specialty" class="col-sm-8 input-lg" #newSpecialty>
-        <input required placeholder="address" class="col-sm-8 input-lg" #newAddress>
-        <input required placeholder="price" type="text" class="col-sm-8 input-lg" #newPrice>
+        <input required placeholder="name" class="input-lg" #newName>
+        <input required placeholder="specialty" class="input-lg" #newSpecialty>
+        <input required placeholder="address" class="input-lg" #newAddress>
+        <input required placeholder="price" type="text" class="input-lg" #newPrice>
         <button type="submit" class="btn-success btn-lg add-button">Add</button>
       </form>
     </div>

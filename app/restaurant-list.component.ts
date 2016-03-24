@@ -10,12 +10,10 @@ import { RestaurantDetailsComponent} from './restaurant-details.component';
   directives: [RestaurantComponent, NewRestaurantComponent, RestaurantDetailsComponent],
   template: `
     <new-restaurant (onSubmitNewRestaurant)="createRestaurant($event)"></new-restaurant>
+    <br>
     <restaurant-display *ngFor="#currentRestaurant of restaurantList"
       [restaurant]="currentRestaurant"
-      (click)="restaurantClicked(currentRestaurant)"
-      [class.selected]="currentRestaurant === selectedRestaurant"
     ></restaurant-display>
-    <restaurant-details *ngIf="selectedRestaurant" [restaurant]="selectedRestaurant"></restaurant-details>
   `
 })
 
