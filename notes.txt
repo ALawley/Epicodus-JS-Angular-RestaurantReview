@@ -1,18 +1,13 @@
-- edit each restaurant
-- sort by specialty
 - add rating/wait time review functionality
 - display average wait time and rating
-
-
-
-
-
 
 
 
 - hardcode restaurants and display restaurant names
 - when clicked, show more restaurant details
 - add restaurants
+- edit each restaurant
+- sort by specialty
 
 
 

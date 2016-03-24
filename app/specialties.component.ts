@@ -3,14 +3,18 @@ import { Restaurant } from './restaurant.model';
 
 @Component({
   selector: 'specialties',
-  inputs: ['restaurant'],
+  inputs: ['restaurant', 'showAll'],
   outputs: ['onSpecialtySelect'],
   template: `
-    <select *ngIf="restaurant" (change)="onChange($event.target.value)">
+    <select *ngIf="showAll" (change)="onChange($event.target.value)">
+      <option selected>All Restaurants</option>
+      <option *ngFor="#currentSpecialty of specialtiesList">{{ currentSpecialty }}</option>
+    </select>
+    <select *ngIf="restaurant && !showAll" (change)="onChange($event.target.value)">
       <option *ngFor="#currentSpecialty of specialtiesList"
       [selected]="currentSpecialty === restaurant.specialty">{{ currentSpecialty }}</option>
     </select>
-    <select *ngIf="!restaurant" (change)="onChange($event.target.value)">
+    <select *ngIf="!restaurant && !showAll" (change)="onChange($event.target.value)">
       <option *ngFor="#currentSpecialty of specialtiesList">{{ currentSpecialty }}</option>
     </select>
   `
