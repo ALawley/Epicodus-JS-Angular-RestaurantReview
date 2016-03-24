@@ -28,4 +28,11 @@ export class RestaurantListComponent {
   restaurantClicked(clickedRestaurant: Restaurant): void {
     this.selectedRestaurant = clickedRestaurant;
   }
+  deleteCleanup(): void {
+    for (var i = 0; i < this.restaurantList.length; i++){
+      if (this.restaurantList[i].delete) {
+        this.restaurantList.splice(i, 1);
+      }
+    }
+  }
 }
