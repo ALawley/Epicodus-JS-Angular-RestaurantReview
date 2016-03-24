@@ -28,6 +28,6 @@ export class RestaurantDetailsComponent {
     this.restaurantToEdit = true;
   }
   deleteCleanup() {
-
+    
   }
 }
