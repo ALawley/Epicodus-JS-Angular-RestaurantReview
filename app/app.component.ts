@@ -1,11 +1,14 @@
 import { Component } from 'angular2/core';
 import { Restaurant } from './restaurant.model';
+import { RestaurantList } from './restaurant-list.component';
 
 @Component({
   selector: 'my-app',
+  directives: [RestaurantListComponent],
   template: `
     <div class="container">
       <h1>Restaurant Reviews!</h1>
+      <restaurant-list [restaurantList]="restaurants"></restaurant-list>
     </div>
   `
 })
