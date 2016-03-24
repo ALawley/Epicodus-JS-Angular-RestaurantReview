@@ -1,10 +1,11 @@
 import { Component } from 'angular2/core';
 import { Restaurant } from './restaurant.model';
+import { RestaurantComponent } from './restaurant.component';
 
 @Component({
   selector: 'restaurant-list',
   inputs: ['restaurantList'],
-  directives: [],
+  directives: [RestaurantComponent],
   template: `
     <restaurant-display *ngFor="#currentRestaurant of restaurantList" [restaurant]="currentRestaurant">
     </restaurant-display>

@@ -1,6 +1,6 @@
 import { Component } from 'angular2/core';
 import { Restaurant } from './restaurant.model';
-import { RestaurantList } from './restaurant-list.component';
+import { RestaurantListComponent } from './restaurant-list.component';
 
 @Component({
   selector: 'my-app',
