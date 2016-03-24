@@ -3,16 +3,15 @@ import { Restaurant } from './restaurant.model';
 
 @Component({
   selector: 'specialties',
+  inputs: ['restaurant'],
   outputs: ['onSpecialtySelect'],
   template: `
-    <select (change)="onChange($event.target.value)">
-      <option value="Sandwiches" selected="selected">Sandwiches</option>
-      <option value="Mexican">Mexican</option>
-      <option value="Vietnamese">Vietnamese</option>
-      <option value="Italian">Italian</option>
-      <option value="Ramen">Ramen</option>
-      <option value="New American">New American</option>
-      <option value="Other">Other</option>
+    <select *ngIf="restaurant" (change)="onChange($event.target.value)">
+      <option *ngFor="#currentSpecialty of specialtiesList"
+      [selected]="currentSpecialty === restaurant.specialty">{{ currentSpecialty }}</option>
+    </select>
+    <select *ngIf="!restaurant" (change)="onChange($event.target.value)">
+      <option *ngFor="#currentSpecialty of specialtiesList">{{ currentSpecialty }}</option>
     </select>
   `
 })
@@ -26,4 +25,6 @@ export class SpecialtiesComponent {
     console.log("child", specialtyOption);
     this.onSpecialtySelect.emit(specialtyOption);
   }
+  public specialtiesList: string[] = ["Sandwiches", "Mexican", "Vietnamese", "Italian", "Ramen", "New American", "Other"];
+
 }

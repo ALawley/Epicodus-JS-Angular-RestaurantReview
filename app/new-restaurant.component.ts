@@ -31,7 +31,6 @@ export class NewRestaurantComponent {
     newRestaurantInputs.push(newName.value);
 
     newRestaurantInputs.push(this.newRestaurantSpecialty);
-    debugger;
     newRestaurantInputs.push(newAddress.value);
     newRestaurantInputs.push(newPrice.value);
 

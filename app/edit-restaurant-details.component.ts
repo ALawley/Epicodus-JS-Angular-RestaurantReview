@@ -11,7 +11,7 @@ import { SpecialtiesComponent } from './specialties.component';
     <div class="restaurant-form">
       <h4>Edit Restaurant Information</h4>
       <input [(ngModel)]="restaurant.name" class="input-md">
-      <specialties (onSpecialtySelect)="updateSpecialty($event)"></specialties>
+      <specialties [restaurant]="restaurant" (onSpecialtySelect)="updateSpecialty($event)"></specialties>
       <input [(ngModel)]="restaurant.address" class="input-md">
       <input [(ngModel)]="restaurant.price" type="text" class="input-md">
       <button (click)=endEdit() class="btn-success btn-md add-button">Done Editing</button>
