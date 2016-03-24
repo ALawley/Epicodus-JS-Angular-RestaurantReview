@@ -7,7 +7,7 @@ import { RestaurantDetailsComponent} from './restaurant-details.component';
   inputs: ['restaurant'],
   directives: [RestaurantDetailsComponent],
   template: `
-    <h3 (click)="restaurantClicked()">{{ restaurant.name }}</h3>
+    <h3 (click)="restaurantClicked()">{{ restaurant.name }} - {{ restaurant.getReviewAvg()}}</h3>
     <restaurant-details *ngIf="detailShow" [restaurant]="restaurant"></restaurant-details>
 
   `
